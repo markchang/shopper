@@ -9,12 +9,15 @@ gem 'omniauth'
 gem 'omniauth-browserid'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails'
-  gem 'therubyracer', :platform => :ruby
+	gem 'sass-rails',   '~> 3.2.3'
+	gem 'coffee-rails', '~> 3.2.1'
+	gem 'uglifier', '>= 1.0.3'
+	gem 'twitter-bootstrap-rails'
+	gem 'therubyracer', :platform => :ruby
 end
 
 gem 'jquery-rails'
 
+group :production do
+	gem 'pg'
+end
