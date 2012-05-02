@@ -1,7 +1,7 @@
-= simple_form_for @product, :html => { :class => 'form-horizontal' } do |f|
-  = f.input :name
-  = f.input :price
-  = f.input :description
+= simple_form_for @product, :html => { :class => 'form-vertical' } do |f|
+  = f.input :name, :placeholder => 'Short name'
+  = f.input :price, :placeholder => '5'
+  = f.input :description, :placeholder => 'Witty description'
   .form-actions
     = f.button :submit, :class => 'btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), products_path, :class => 'btn'
