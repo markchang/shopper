@@ -1,7 +1,8 @@
 = simple_form_for @product, :html => { :class => 'form-vertical' } do |f|
-  = f.input :name, :label => 'Short name'
-  = f.input :price, :label => 'Price, integer only'
+  = f.input :title, :label => 'Title', :input_html => {:class => 'span5'}
+  = f.input :price, :label => 'Price, whole dollars only'
   = f.input :description, :input_html => {:rows => 5, :class => 'span5'}
   .form-actions
     = f.button :submit, :class => 'btn-primary'
-    = link_to t('.cancel', :default => t("helpers.links.cancel")), products_path, :class => 'btn'
+    %br
+    = link_to 'Cancel', products_path

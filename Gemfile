@@ -6,6 +6,7 @@ gem 'haml-rails'
 gem 'simple_form'
 gem 'omniauth'
 gem 'omniauth-browserid'
+gem 'redcarpet'
 
 group :assets do
 	gem 'sass-rails',   '~> 3.2.3'
