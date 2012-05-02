@@ -6,7 +6,7 @@
 	= @product.user.name
 
 %p
-	= @product.description
+	= @product_markdown
 
 .form-actions
 	= link_to t('.back', :default => t("helpers.links.back")), products_path, :class => 'btn'

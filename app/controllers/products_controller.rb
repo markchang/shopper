@@ -15,7 +15,10 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+      :autolink => true, :space_after_headers => true)
     @product = Product.find(params[:id])
+    @product_markdown = markdown.render(@product.description).html_safe
 
     respond_to do |format|
       format.html # show.html.erb
