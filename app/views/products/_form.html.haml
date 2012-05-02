@@ -1,7 +1,8 @@
 = simple_form_for @product, :html => { :class => 'form-vertical' } do |f|
   = f.input :title, :label => 'Title', :input_html => {:class => 'span5'}
   = f.input :price, :label => 'Price, whole dollars only'
-  = f.input :description, :input_html => {:rows => 5, :class => 'span5'}
+
+  = f.input :description, :input_html => {:rows => 5, :class => 'span5'}, :label => 'Description, <a target="_new" href="http://github.github.com/github-flavored-markdown/">Github Markdown</a> supported. Use <a href="http://imgur.com/">imgur</a> or <a href="http://minus.com">minus.com</a> for images.'
   .form-actions
     = f.button :submit, :class => 'btn-primary'
     %br
