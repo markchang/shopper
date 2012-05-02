@@ -23,6 +23,17 @@ class ProductsController < ApplicationController
     end
   end
 
+  # GET /mine
+  # GET /mine.json
+  def user_products
+    @products = current_user.products
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @products }
+    end
+  end
+
   # GET /products/new
   # GET /products/new.json
   def new
