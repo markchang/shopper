@@ -51,6 +51,8 @@ class ProductsController < ApplicationController
   # GET /products/1/edit
   def edit
     @product = Product.find(params[:id])
+
+    redirect_to root_url, :notice => "Sorry, that isn't your product" unless current_user == @product.user
   end
 
   # POST /products
@@ -74,6 +76,8 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
 
+    redirect_to root_url, :notice => "Sorry, that isn't your product" unless current_user == @product.user
+
     respond_to do |format|
       if @product.update_attributes(params[:product])
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
@@ -89,6 +93,10 @@ class ProductsController < ApplicationController
   # DELETE /products/1.json
   def destroy
     @product = Product.find(params[:id])
+
+    redirect_to root_url, :notice => "Sorry, that isn't your product" unless current_user == @product.user
+
+    # else, it is our product
     @product.destroy
 
     respond_to do |format|
