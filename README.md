@@ -1,3 +1,3 @@
 ## Shopper
 
-A simple single-categoroy classified ads system. Emphasis on **simple**.
+A simple single-category classified ads system. Emphasis on **simple**.
